@@ -11,7 +11,7 @@ export default async function main() {
     	`powershell -NoProfile -Command "$shell = New-Object -ComObject Shell.Application; $shell.MinimizeAll()"`
   	);
 
-	await showHUD("Focusing '" + activeWindow.id + "'");
+	await showHUD("Focusing '" + activeWindow.application?.name + "'");
 
 	// Restore using hwnd and the windows API (https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-showwindow)
 	const hwnd = activeWindow.id;
