@@ -1,8 +1,6 @@
 import { showHUD, WindowManagement } from "@raycast/api";
 import { exec } from "child_process";
 
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
 export default async function main() {
 	const activeWindow = await WindowManagement.getActiveWindow();
 	
